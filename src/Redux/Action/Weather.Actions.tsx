@@ -1,5 +1,5 @@
 import { weatherServices } from "../Services/Weather.services";
-import { GET_WEATHER_BY_LOCATION } from '../Type'
+import { GET_WEATHER_BY_LOCATION } from "../types";
 
 const getWeatherDetailsByLocation = (location: any) => {
   return async (dispatch: any) => {

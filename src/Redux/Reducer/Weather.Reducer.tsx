@@ -1,4 +1,4 @@
-import { GET_WEATHER_BY_LOCATION } from "../Type";
+import { GET_WEATHER_BY_LOCATION } from "../types";
 interface initialStateCloud {
   weather_data: any;
 }
