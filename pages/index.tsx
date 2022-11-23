@@ -1,22 +1,13 @@
-import React, { useState } from "react";
-import dynamic from "next/dynamic";
-// import Dropbox from "./CreateAccountt/Dropbox";
-// import Account from "./CreateAccountt/Account";
-// import Login1 from "./CreateAccountt/Login";
-import Login2 from "./CreateAccountt/Login2";
-const Nav = dynamic(() => import("./CreateAccountt/Nav"));
-const Footer = dynamic(() => import("./CreateAccountt/Footer"));
-const Section = dynamic(() => import("./CreateAccountt/Section"));
+import * as React from "react";
 
-const index = () => {
+import Weather from "../src/components/Weather";
+
+const Home = () => {
   return (
     <>
-      {/* <Nav />
-      <Section />
-      <Footer /> */}
-      <Login2/>
+      <Weather />
     </>
   );
 };
 
-export default index;
+export default Home;
