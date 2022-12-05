@@ -1,11 +1,10 @@
-import { GET_WEATHER_BY_LOCATION } from "../types";
+import { GET_WEATHER_BY_LOCATION } from "../Types";
 interface initialStateCloud {
   weather_data: any;
 }
 const initialState: initialStateCloud = {
   weather_data: {},
 };
-
 const weatherReducer = (state = { ...initialState }, action: any) => {
   switch (action.type) {
     case GET_WEATHER_BY_LOCATION:

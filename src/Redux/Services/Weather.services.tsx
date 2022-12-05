@@ -9,6 +9,7 @@ const weatherDetailsByLocationData = async (value: String) => {
     })
     .catch((error) => {
       throw error.response.data;
+      // return error.response.data;
     });
 };
 

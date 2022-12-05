@@ -1,24 +1,22 @@
 import { weatherServices } from "../Services/Weather.services";
-import { GET_WEATHER_BY_LOCATION } from "../types";
-
+import { GET_WEATHER_BY_LOCATION } from "../Types";
 const getWeatherDetailsByLocation = (location: any) => {
   return async (dispatch: any) => {
     try {
-      //   dispatch({ type: FAQ_LOADING, payload: true });
       const res = await weatherServices.weatherDetailsByLocationData(location);
 
       dispatch({
         type: GET_WEATHER_BY_LOCATION,
         payload: res,
       });
-
-      //   dispatch({ type: FAQ_LOADING, payload: false });
     } catch (error) {
-      //   dispatch({ type: FAQ_LOADING, payload: false });
+      dispatch({
+        type: GET_WEATHER_BY_LOCATION,
+        payload: error,
+      });
     }
   };
 };
-
 export const weatherActions = {
   getWeatherDetailsByLocation,
 };
